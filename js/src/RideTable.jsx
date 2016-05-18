@@ -3,8 +3,10 @@ var RideRow = require('./RideRow.jsx');
 module.exports = React.createClass({
 
   getInitialState() {
+    var list = this.props.rides;
+    list.sort(function(a,b) {return (a.DisplayName > b.DisplayName) ? 1 : ((b.DisplayName > a.DisplayName) ? -1 : 0);} );
     return {
-      rides: this.props.rides
+      rides: list
     }
   },
 
@@ -88,6 +90,7 @@ module.exports = React.createClass({
     }, (data) => {
       var newList = this.state.rides;
       newList.push(data);
+      newList.sort(function(a,b) {return (a.DisplayName > b.DisplayName) ? 1 : ((b.DisplayName > a.DisplayName) ? -1 : 0);} );
       this.setState({
         rides: newList
       });
