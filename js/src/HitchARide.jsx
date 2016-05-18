@@ -4,7 +4,7 @@ var MyComponent = require('./MyComponent.jsx');
 
   $(document).ready(function() {
       $('.connectHitchARide').each(function(i, el) {
-        ReactDOM.render(<MyComponent />, el);
+        ReactDOM.render(<MyComponent name={$(el).data('name')} />, el);
       });
   });
 

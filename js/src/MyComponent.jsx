@@ -2,7 +2,7 @@ module.exports = React.createClass({
 
   getInitialState() {
     return {
-      name: 'DNN Connect'
+      name: this.props.name
     }
   },
 
