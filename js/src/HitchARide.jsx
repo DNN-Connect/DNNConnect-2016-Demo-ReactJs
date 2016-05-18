@@ -1,10 +1,10 @@
-var MyComponent = require('./MyComponent.jsx');
+var RideTable = require('./RideTable.jsx');
 
 (function($, window, document, undefined) {
 
   $(document).ready(function() {
       $('.connectHitchARide').each(function(i, el) {
-        ReactDOM.render(<MyComponent name={$(el).data('name')} />, el);
+        ReactDOM.render(<RideTable />, el);
       });
   });
 
