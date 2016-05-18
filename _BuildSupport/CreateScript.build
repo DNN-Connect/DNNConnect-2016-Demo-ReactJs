@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- targets to be executed, when omitted from command line default is run -->
+<project name="HitchARide" default="create.script" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nant.sf.net/release/0.91/nant.xsd D:\Programs\Nant\schema\nant.xsd" xmlns="http://nant.sf.net/release/0.91/nant.xsd">
+ <target name="create.script">
+  <createscript 
+   isdropscript="false" 
+   modulequalifier="Connect_HitchARide" 
+   postscript="" 
+   prescript="" 
+   renamekeys="true"
+   targetfile="D:\Webroot\DNNCONNECT2016\DesktopModules\MVC\Connect\HitchARide\_BuildSupport\Install.00.00.00.SqlDataProvider"
+   originalscriptoutput="D:\Webroot\DNNCONNECT2016\DesktopModules\MVC\Connect\HitchARide\_BuildSupport\InstallOrig.00.00.00.SqlDataProvider"/>
+  <createscript 
+   isdropscript="true" 
+   modulequalifier="Connect_HitchARide" 
+   postscript="" 
+   prescript="" 
+   renamekeys="true"
+   targetfile="D:\Webroot\DNNCONNECT2016\DesktopModules\MVC\Connect\HitchARide\_BuildSupport\Uninstall.SqlDataProvider"/>
+ </target>
+</project>
