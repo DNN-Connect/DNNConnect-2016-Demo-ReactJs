@@ -4,7 +4,7 @@ var RideTable = require('./RideTable.jsx');
 
   $(document).ready(function() {
       $('.connectHitchARide').each(function(i, el) {
-        ReactDOM.render(<RideTable />, el);
+        ReactDOM.render(<RideTable rides={$(el).data('rides')} />, el);
       });
   });
 

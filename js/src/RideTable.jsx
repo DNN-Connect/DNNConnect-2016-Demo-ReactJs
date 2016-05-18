@@ -1,11 +1,17 @@
+var RideRow = require('./RideRow.jsx');
+
 module.exports = React.createClass({
 
   getInitialState() {
     return {
+      rides: this.props.rides
     }
   },
 
   render() {
+    var rideRows = this.state.rides.map((item) => {
+      return <RideRow ride={item} key={item.RideId} />
+    });
     return (
 <div class="container">
  <div className="row">
@@ -19,6 +25,7 @@ module.exports = React.createClass({
      </tr>
     </thead>
     <tbody>
+      {rideRows}
     </tbody>
    </table>
   </div>
