@@ -5,6 +5,8 @@
     HitchARideModuleContext.AddBootstrapCss();
     HitchARideModuleContext.AddBootstrapJs();
 }
-<div class="connectHitchARide" data-rides="@(Newtonsoft.Json.JsonConvert.SerializeObject(Connect.HitchARide.Core.Repositories.RideRepository.Instance.GetRides(Dnn.ActiveModule.ModuleID)))">
+<div class="connectHitchARide" 
+     data-rides="@(Newtonsoft.Json.JsonConvert.SerializeObject(Connect.HitchARide.Core.Repositories.RideRepository.Instance.GetRides(Dnn.ActiveModule.ModuleID)))"
+     data-moduleid="@Dnn.ActiveModule.ModuleID">
 </div>
 

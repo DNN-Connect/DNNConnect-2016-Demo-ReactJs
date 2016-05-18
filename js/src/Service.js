@@ -22,4 +22,8 @@ window.ConnectHitchARideService = function ($, mid) {
         });
     }
 
+    this.addRide = function(ride, success, fail) {
+        this.ajaxCall('POST', 'Rides', 'Add', null, ride, success, fail);
+    }
+
 }

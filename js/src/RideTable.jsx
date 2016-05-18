@@ -80,7 +80,14 @@ module.exports = React.createClass({
 
   updateRide(e) {
     e.preventDefault();
-    //
+    this.props.service.addRide({
+      Incoming: this.refs.chkIncoming.checked,
+      Location: this.refs.txtLocation.value,
+      Places: this.refs.txtPlaces.value,
+      Notes: this.refs.txtNotes.value
+    }, (data) => {
+      //
+    });
     $('#editRide').modal('hide');
   }
 
