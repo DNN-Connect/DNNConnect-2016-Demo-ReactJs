@@ -17,9 +17,9 @@ module.exports = React.createClass({
     );
   },
 
-  textChanged(newValue) {
+  textChanged(boxInp) {
     this.setState({
-      name: newValue
+      name: boxInp.refs.txtName.value
     });
   }
 

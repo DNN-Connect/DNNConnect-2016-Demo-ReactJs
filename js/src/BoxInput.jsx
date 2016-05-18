@@ -8,13 +8,9 @@ module.exports = React.createClass({
   render() {
     return (
         <p>
-          <input type="text" ref="txtName" value={this.props.name} onChange={this.change} />
+          <input type="text" ref="txtName" value={this.props.name} onChange={this.props.textChanged.bind(null, this)} />
         </p>
     );
-  },
-
-  change() {
-    this.props.textChanged(this.refs.txtName.value);
   }
 
 });
