@@ -1,3 +1,5 @@
+var BoxInput = require('./BoxInput.jsx');
+
 module.exports = React.createClass({
 
   getInitialState() {
@@ -10,14 +12,14 @@ module.exports = React.createClass({
     return (
       <div>
         <h1>Hello {this.state.name}!</h1>
-        <p><input type="text" ref="txtName" value={this.state.name} onChange={this.textChanged} /></p>
+        <BoxInput name={this.state.name} textChanged={this.textChanged} />
       </div>
     );
   },
 
-  textChanged() {
+  textChanged(newValue) {
     this.setState({
-      name: this.refs.txtName.value
+      name: newValue
     });
   }
 
