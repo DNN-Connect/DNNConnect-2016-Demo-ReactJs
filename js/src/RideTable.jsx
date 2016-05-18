@@ -86,7 +86,11 @@ module.exports = React.createClass({
       Places: this.refs.txtPlaces.value,
       Notes: this.refs.txtNotes.value
     }, (data) => {
-      //
+      var newList = this.state.rides;
+      newList.push(data);
+      this.setState({
+        rides: newList
+      });
     });
     $('#editRide').modal('hide');
   }
