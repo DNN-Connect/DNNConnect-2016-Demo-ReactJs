@@ -14,6 +14,13 @@ module.exports = React.createClass({
     var rideRows = this.state.rides.map((item) => {
       return <RideRow ride={item} key={item.RideId} />
     });
+    var addPanel = this.props.security.IsTraveller ? (
+ <div className="row">
+  <div className="col-sm-12">
+   <a href="#" className="btn btn-primary" onClick={this.addClick}>Add</a>
+  </div>
+ </div>
+      ) : null;
     return (
 <div class="container">
  <div className="row">
@@ -32,11 +39,7 @@ module.exports = React.createClass({
    </table>
   </div>
  </div>
- <div className="row">
-  <div className="col-sm-12">
-   <a href="#" className="btn btn-primary" onClick={this.addClick}>Add</a>
-  </div>
- </div>
+ {addPanel}
 
 <div className="modal fade" id="editRide" tabindex="-1" role="dialog" aria-labelledby="editRideLabel">
  <div className="modal-dialog" role="document">
