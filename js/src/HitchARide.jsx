@@ -6,7 +6,8 @@ var RideTable = require('./RideTable.jsx');
       $('.connectHitchARide').each(function(i, el) {
         ReactDOM.render(<RideTable rides={$(el).data('rides')}
                                    service={new window.ConnectHitchARideService($, $(el).data('moduleid'))}
-                                   security={$(el).data('security')} />, el);
+                                   security={$(el).data('security')}
+                                   resources={$(el).data('resources')} />, el);
       });
   });
 

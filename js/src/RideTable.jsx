@@ -30,7 +30,7 @@ module.exports = React.createClass({
      <tr>
       <th>Name</th>
       <th>Location</th>
-      <th>Nr Places</th>
+      <th>{this.props.resources.NrPlaces}</th>
      </tr>
     </thead>
     <tbody>
